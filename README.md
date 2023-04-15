@@ -21,10 +21,13 @@ If you have access to ChatGPT plugins, you can try this one out!
 3. Enter "ittybittysite-generator.vercel.app"
 4. Click "Install".
 
-## For Developers
+## Contribution
 
-PRs are welcome!
+- PRs and issues are welcome
+- With new PRs, please include context and description about the change
 
 ## TODOs
 
+- [ ] Return an error when the HTML/CSS/JS content length exceeds 1,000 chars because ChatGPT struggles to create URLs longer than that length
+- [ ] Better prompting via the API spec, manifest, and/or API endpoint name to encourage ChatGPT to use even more minified code
 - [ ] Option to return a short link from the API
