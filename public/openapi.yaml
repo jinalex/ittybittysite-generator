@@ -1,0 +1,64 @@
+openapi: 3.0.1
+info:
+  title: ChatGPT Itty.bitty.site Plugin
+  description: A plugin that allows users to create and share itty.bitty.site URLs using ChatGPT-generated inputs.
+  version: 'v1'
+servers:
+  - url: https://ittybittysite-generator.vercel.app
+paths:
+  /api/createIttyBittySite:
+    post:
+      operationId: createIttyBittySite
+      summary: Create an itty.bitty.site
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/createIttyBittySiteRequest'
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/createIttyBittySiteResponse'
+
+components:
+  schemas:
+    createIttyBittySiteRequest:
+      type: object
+      required:
+      - content
+      - title
+      - description
+      - favicon
+      properties:
+        content:
+          type: string
+          description: The minified no-whitespace HTML/CSS/JS for the itty.bitty.site.
+        title:
+          type: string
+          description: The title of the itty.bitty.site.
+        description:
+          type: string
+          description: The description of the itty.bitty.site.
+        image:
+          type: string
+          description: The image URL for the itty.bitty.site. `/i/BASE64_IMAGE_URL/`
+        favicon:
+          type: string
+          description: The favicon URL or emoji for the itty.bitty.site. `/f/BASE64_FAVICON_URL_OR_EMOJI/`
+    createIttyBittySiteResponse:
+      type: object
+      properties:
+        url:
+          type: string
+          description: The URL of the generated itty.bitty.site.
+        urlSizeInBytes:
+          type: integer
+          description: The size of the generated URL in bytes.
+        success:
+          type: boolean
+          description: Whether the site generation was successful or not
+
