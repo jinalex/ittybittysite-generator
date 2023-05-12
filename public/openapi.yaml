@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: itty.bitty.site generator API
-  description: Lets users to create and share itty.bitty.site URLs by taking in webiste inputs and returning a working URL.
+  description: Lets users to create and share itty.bitty.site URLs by taking in website inputs and returning a working URL.
   version: 'v1'
 servers:
   - url: https://ittybittysite-generator.vercel.app
