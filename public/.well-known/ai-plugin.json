@@ -2,8 +2,8 @@
   "schema_version": "v1",
   "name_for_human": "itty.bitty.site generator",
   "name_for_model": "ittyBittySiteGenerator",
-  "description_for_human": "Plugin for creating itty.bitty.site URLs. Dream up a site and we'll make one just for you.",
-  "description_for_model": "Plugin for creating itty.bitty.site URLs. You can generate a URL that contains your minified HTML/CSS/JavaScript content.",
+  "description_for_human": "Create itty.bitty.site URLs. Dream up a site and we'll make one just for you.",
+  "description_for_model": "Create itty.bitty.site URLs. You can generate a URL that contains your minified HTML/CSS/JavaScript content.",
   "auth": {
     "type": "none"
   },
